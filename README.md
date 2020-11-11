@@ -1,2 +1,3 @@
-# postgresql-guides
-PostgreSQL Guides
+# PostgreSQL Guides
+
+Useful information about PostgreSQL.
