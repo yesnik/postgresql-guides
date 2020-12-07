@@ -15,3 +15,15 @@ Add not null constraint:
 ```sql
 ALTER TABLE conference ALTER COLUMN slug SET NOT NULL;
 ```
+
+Add default value:
+
+```sql
+ALTER TABLE comment ALTER state SET DEFAULT 'submitted';
+```
+
+Remove default value / drop default value:
+
+```sql
+ALTER TABLE comment ALTER state DROP DEFAULT;
+```
