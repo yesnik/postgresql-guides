@@ -4,10 +4,14 @@
 
 ```sql
 CREATE USER kenny WITH password '123';
-
-CREATE ROLE developer PASSWORD '123' CREATEDB INHERIT LOGIN;
-
-CREATE ROLE admin PASSWORD '123' SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
+```
+Create an account where the user can create databases, login:
+```sql
+CREATE USER developer PASSWORD '123' CREATEDB INHERIT LOGIN;
+```
+Create an account where the user can create roles:
+```sql
+CREATE USER admin PASSWORD '123' SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
 ```
 
 ## Drop user
