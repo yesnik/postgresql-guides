@@ -5,13 +5,13 @@
 ```sql
 CREATE USER kenny WITH password '123';
 ```
-Create an account where the user can create databases, login:
+Create an account where the user can create databases:
 ```sql
-CREATE USER developer PASSWORD '123' CREATEDB INHERIT LOGIN;
+CREATE USER developer PASSWORD '123' CREATEDB;
 ```
 Create an account where the user can create roles:
 ```sql
-CREATE USER admin PASSWORD '123' SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
+CREATE USER admin PASSWORD '123' SUPERUSER CREATEDB CREATEROLE;
 ```
 
 ## Drop user
