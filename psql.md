@@ -11,6 +11,7 @@ sudo su - postgres
 # Run psql console
 psql
 ```
+See [create user](https://github.com/yesnik/postgresql-guides/blob/main/users.md#create-user)
 
 ## Console commands
 
