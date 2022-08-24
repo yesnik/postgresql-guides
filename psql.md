@@ -1,5 +1,19 @@
 # Psql commands
 
+## Log in
+
+After PostgreSQL installation:
+
+```
+# Log in as postgres user
+sudo su - postgres
+
+# Run psql console
+psql
+```
+
+## Console commands
+
 - `psql -h localhost -p 32770 -U kenny -d sales` - connect to database `sales` as user `kenny`, host `localhost`, port `32770`
 - `psql -h localhost -U kenny -d quiz_rails_development`
 
