@@ -4,7 +4,7 @@
 
 After PostgreSQL installation:
 
-```
+```bash
 # Log in as postgres user
 sudo su - postgres
 
@@ -15,8 +15,9 @@ See [create user](https://github.com/yesnik/postgresql-guides/blob/main/users.md
 
 ## Console commands
 
-- `psql -h localhost -p 32770 -U kenny -d sales` - connect to database `sales` as user `kenny`, host `localhost`, port `32770`
-- `psql -h localhost -U kenny -d quiz_rails_development`
+- `psql -U kenny -h localhost -p 32770 -d sales` - connect to database `sales` as user `kenny`, host `localhost`, port `32770`
+- `psql -U kenny -h localhost -d quiz_rails_development`
+- `psql -U root -h localhost` - connect to database `root` as user `root`
 
 ## psql console commands
 
