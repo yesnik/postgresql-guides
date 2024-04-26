@@ -19,7 +19,7 @@ ALTER TABLE conference ADD slug VARCHAR(255);
 
 ### Alter column
 
-Add not null constraint:
+Add `NOT NULL` constraint:
 
 ```sql
 ALTER TABLE conference ALTER COLUMN slug SET NOT NULL;
@@ -36,3 +36,5 @@ Remove default value / drop default value:
 ```sql
 ALTER TABLE comment ALTER state DROP DEFAULT;
 ```
+
+In Postgres it's [impossible](https://wiki.postgresql.org/wiki/Alter_column_position) to alter column's position within a table.
