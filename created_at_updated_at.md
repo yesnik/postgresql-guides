@@ -25,10 +25,10 @@
     ```
 3. Create trigger:
     ```sql
-    CREATE TRIGGER trigger_set_updated_at
+    CREATE TRIGGER trigger_users_set_updated_at
     BEFORE UPDATE ON users
     FOR EACH ROW
     EXECUTE PROCEDURE set_updated_at();
     ```
-    This trigger will execute the trigger_set_timestamp function that we defined earlier. It will do so whenever a row is updated in the todos table.
+    This trigger will execute the `trigger_users_set_updated_at` function that we defined earlier. It will do so whenever a row is updated in the `users` table.
 4. Now both the `created_at` and `updated_at` columns will be saved correctly whenever we insert and update rows in the table.
