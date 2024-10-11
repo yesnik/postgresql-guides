@@ -1,25 +1,40 @@
 # Administration
 
-## Dump
+## Create dump
 
-### Create schema dump
+### Schema only
 
 ```bash
-PGPASSWORD=password pg_dump -U username -h hostname -p port -F plain -f db_schema.sql -s dbname
+pg_dump -U username -h hostname -p port -d dbname -s > db_schema.sql
 ```
-- `-s`, `--schema-only` - dump only the schema, no data
-- See pg_dump [docs](https://www.postgresql.org/docs/current/app-pgdump.html)
 
-### Create data dump
+- `-s`, `--schema-only` - dump only the schema, no data
+
+### Data only
 
 ```bash
-PGPASSWORD=password pg_dump -U username -h hostname -p port -F plain -f db_data.sql -a dbname
+pg_dump -U username -h hostname -p port -d dbname -t table1 -t table2 -a > db_data.sql
 ```
 
 - `-a`, `--data-only` - dump only the data, not the schema
+- `-t` - dump only specified tables
 
-### Import dump
+Archive dump:
+
+```bash
+pg_dump -U username -h hostname -p port -d dbname | gzip > db_data.gz
+```
+
+See pg_dump [docs](https://www.postgresql.org/docs/current/app-pgdump.html)
+
+## Import dump
 
 ```bash
 psql -U username -h hostname -p port -d dbname < db_schema.sql
+```
+
+Import from archive:
+
+```bash
+gunzip -c db_data.gz | psql -U username -h hostname -p port -d dbname
 ```
