@@ -38,3 +38,7 @@ Import from archive:
 ```bash
 gunzip -c db_data.gz | psql -U username -h hostname -p port -d dbname
 ```
+
+## Remove bloat from tables and indexes
+
+Use tool: [pg_repack](https://github.com/reorg/pg_repack)
