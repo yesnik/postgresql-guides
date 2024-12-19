@@ -6,10 +6,10 @@ Show extensions and their versions that are available for installation:
 SELECT name, default_version, installed_version FROM pg_available_extensions;
 ```
 
-To install an extension (in case it does not exist), run the following query:
+To install an extension (e.g. `timescaledb`) in the current database:
 
 ```sql
-CREATE EXTENSION [ IF NOT EXISTS ] extension_name;
+CREATE EXTENSION IF NOT EXISTS timescaledb;
 ```
 
 To upgrade an extension to a newer version, use the following query:
