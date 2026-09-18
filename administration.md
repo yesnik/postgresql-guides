@@ -22,6 +22,9 @@ pg_dump -U username -h hostname -p port -d dbname -t table1 -t table2 -a > db_da
 Archive dump:
 
 ```bash
+pg_dump -U postgres -F t -f mydb.backup.tar dbname
+```
+```bash
 pg_dump -U username -h hostname -p port -d dbname | gzip > db_data.gz
 ```
 
