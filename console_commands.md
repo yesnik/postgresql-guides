@@ -1,5 +1,8 @@
 # Console commands
 
+Before executing below commands it's better to enter console as `postgres` user: `su - postgres`.
+
 - `psql` - run PostgreSQL console
-- `createdb -U postgres mydb` - create database
-- `dropdb -U postgres mydb` - drop database
+- `createdb mydb` - create database
+- `dropdb mydb` - drop database
+- `vacuumdb app_db` - vacuum database
