@@ -10,6 +10,9 @@ sudo su - postgres
 
 # Run psql console
 psql
+
+# Tell Postgres to show internal queries for commands like `\l`, `\d`
+psql -E
 ```
 See [create user](https://github.com/yesnik/postgresql-guides/blob/main/users.md#create-user)
 
