@@ -22,7 +22,7 @@ pg_dump -U username -h hostname -p port -d dbname -t table1 -t table2 -a > db_da
 Archive dump:
 
 ```bash
-pg_dump -U postgres -F t -f mydb.backup.tar dbname
+pg_dump -U postgres -F t -f mydb.backup.tar app_db
 ```
 ```bash
 pg_dump -U username -h hostname -p port -d dbname | gzip > db_data.gz
@@ -38,6 +38,9 @@ psql -U username -h hostname -p port -d dbname < db_schema.sql
 
 Import from archive:
 
+```bash
+pg_restore -U postgres -d app_db mydb.backup.tar
+```
 ```bash
 gunzip -c db_data.gz | psql -U username -h hostname -p port -d dbname
 ```
