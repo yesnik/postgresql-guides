@@ -42,11 +42,11 @@ GRANT kenny, lora TO managers;
 REVOKE managers FROM lora;
 ```
 
-## Grant all permissions to DB
+## Grant permissions on the DB to the user
 
-```sql
-GRANT ALL ON DATABASE my_db TO kenny;
-```
+- `GRANT ALL ON DATABASE my_db TO kenny;` - grant all permissions
+- `GRANT CONNECT ON DATABASE my_db TO kenny;` - grant connect
+- `GRANT CREATE ON DATABASE my_db TO kenny;` - grant create DB objects
 
 ## Edit user
 
