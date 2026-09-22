@@ -27,6 +27,7 @@ See [create user](https://github.com/yesnik/postgresql-guides/blob/main/users.md
 - `\l` / `\list` - show list of databases
 - `\c sales` / `\connect sales` - use DB *sales*
 - `\d` - show tables in active DB
+- `\du` - show roles (users)
 - `\dS+ lots` - show columns in the `lots` table
 - `\x` - toggle extended display of query results
 - `\q` - quit console
