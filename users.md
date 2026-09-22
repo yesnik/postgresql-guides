@@ -28,6 +28,10 @@ DROP USER kenny;
 - A role can be considered a "user", a "group", or both depending on how it is used.
 
 ```sql
+CREATE ROLE developers WITH LOGIN CREATEDB CREATEROLE;
+```
+
+```sql
 CREATE ROLE managers;
 
 CREATE ROLE kenny WITH LOGIN password 'password' ;
@@ -47,6 +51,9 @@ REVOKE managers FROM lora;
 - `GRANT ALL ON DATABASE my_db TO kenny;` - grant all permissions
 - `GRANT CONNECT ON DATABASE my_db TO kenny;` - grant connect
 - `GRANT CREATE ON DATABASE my_db TO kenny;` - grant create DB objects
+- `GRANT CONNECT CREATE ON DATABASE my_db TO kenny;` - grant connect, create
+- `GRANT USAGE CREATE ON SCHEMA schema_name TO kenny;` - grant create on a schema
+- `GRANT SELECT, INSERT, UPDATE ON TABLE my_table TO kenny;` - grant select, insert, update on a table
 
 ## Edit user
 
