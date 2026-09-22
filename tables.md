@@ -10,6 +10,16 @@ CREATE TABLE users (
 );
 ```
 
+### Create table in the tablespace
+
+A [tablespace](https://www.postgresql.org/docs/current/sql-createtablespace.html) allows superusers to define an alternative location on the file system where the data files containing database objects (such as tables and indexes) can reside.
+
+```sql
+CREATE TABLESPACE dbspace LOCATION '/data/dbs';
+
+CREATE TABLE mytable (id SERIAL PRIMARY KEY) TABLESPACE dbspace;
+```
+
 ## Alter table
 
 ### Add column
